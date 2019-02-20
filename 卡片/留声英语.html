@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>留声英语</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			text-decoration: none;
+		}
+		html,
+		body{
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			overflow-x: hidden;
+		}
+		.wrapper{
+			height: 500px;
+			width: 330px;
+			margin: 50px auto 0 auto;
+			background-color: #fff;
+			/*border: 1px solid black;*/
+/*			border-right: 1px solid #aaa;
+			border-bottom: 1px solid #aaa;
+*/			border-radius: 20px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		/* 标题区 */
+		.wrapper .title-wrapper{
+			width: 100%;
+			height: 270px;
+
+			/*border: 1px solid red;*/
+			position: relative;
+			background: url('http://www.xilafangdichan.com/uploadfile/productimg/2013792211443828128.jpg');
+			background-size: auto 270px;
+		}
+		.wrapper .title-wrapper .version-wrapper{
+			width: 52px;
+			height: 22px;
+			line-height: 22px;
+			color: #ff8;
+			background-color: #666;
+
+			position: absolute;
+			left: 0px;
+			top: 25px;
+			border-top-right-radius: 11px;
+			border-bottom-right-radius: 11px;
+		}
+		.wrapper .title-wrapper .version-wrapper span{
+			font-size: 13px;
+			margin-left: 6px;
+		}
+		.wrapper .title-wrapper .title-con{
+			width: 100%;
+			padding: 10px 20px;
+			position: absolute;
+			bottom: 0px;
+			
+			background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+			/*border: 1px solid black;*/
+		}
+		.wrapper .title-wrapper .title-con p{
+			color: #fff;
+			font-weight: 700;
+		}
+		.wrapper .title-wrapper .title-con .title-num{
+			font-size: 25px;
+		}
+		.wrapper .title-wrapper .title-con .title-eng{
+			font-size: 20px;
+			font-family: monospace;
+			width: 300px;
+			margin-bottom: 5px;
+			/*border: 1px solid black;*/
+		}
+		.wrapper .title-wrapper .title-con .title-ch{
+			font-size: 13px;
+			font-weight: 100;
+		}
+		
+		/* 信息区 */
+		.wrapper .info-wrapper{
+			height: 115px;
+			position: relative;
+			/*border: 1px solid black;*/
+			border-bottom: 3px dashed #ccc;
+		}
+		.wrapper .info-wrapper .info-con{
+			width: 90px;
+			height: 90px;
+			position: absolute;
+			/*border: 1px solid black;*/
+			top: 15px;
+		}
+		.wrapper .info-wrapper .avatar-wrapper{
+			left: 5px;
+		}
+		.wrapper .info-wrapper .avatar-wrapper .avatar{
+			height: 50px;
+			width: 50px;
+			margin: 10px auto 5px;
+			border-radius: 25px;
+			overflow: hidden;
+
+			/*border: 1px solid #aaa;*/
+		}
+		.wrapper .info-wrapper .avatar-wrapper .avatar img{
+			height: 50px;
+			width: 50px;
+		}
+
+		.wrapper .info-wrapper .avatar-wrapper .name{
+			width: 100%;
+			height: 18px;
+			line-height: 18px;
+			text-align: center;
+			font-size: 12px;
+			font-family: Arial;
+		}
+
+		.wrapper .info-wrapper .accum-days-wrapper{
+			left: 102px;		
+		}
+		.wrapper .info-wrapper .accum-mins-wrapper{
+			left: 200px;
+		}
+
+		.wrapper .info-wrapper .title{
+			margin: 15px 10px 10px 10px;
+			font-size: 10px;
+			color: #777;
+		}
+		.wrapper .info-wrapper .num{
+			margin-left: 10px;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: monospace;
+		}
+		.wrapper .info-wrapper .unit{
+			margin-left: -2px;
+			font-size: 12px;
+		}
+
+		/* 分割区 */
+		.wrapper .cut-off{
+			width: 100%;
+			height: 20px;
+			margin-top: -12px;
+			position: relative;
+		}
+		.wrapper .cut-off div{
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			/*border: 1px solid black;*/
+			background-color: #000;
+			border: 1px solid #aaa;
+		}
+		.wrapper .cut-off .left{
+			position: absolute;
+			left: -10px;
+		}
+		.wrapper .cut-off .right{
+			position: absolute;
+			right: -11px;
+		}
+
+		/* 二维码区 */
+		.wrapper .code-wrapper{
+			position: relative;
+		}
+		.wrapper .code-wrapper .right{
+			width:75px;
+			height: 75px;
+			position: absolute;
+			right: 10px;
+			top: 12px;
+		}
+		.wrapper .code-wrapper .right img{
+			width: 75px;
+			height: 75px;
+		}
+		.wrapper .code-wrapper .left{
+			width: 150px;
+			height: 75px;
+			position: absolute;
+			left: 20px;
+			top: 12px;
+		}
+		.wrapper .code-wrapper .left .app-name-wrapper{
+			height: 25px;
+			width: 100%;
+			position: absolute;
+			left: 10px;
+			top: 15px;
+		}
+		.wrapper .code-wrapper .left .app-name{
+			height: 25px;
+			width: 60px;
+			display: inline-block;
+			font-size: 14px;
+			line-height: 25px;
+
+		}
+		.wrapper .code-wrapper .left .return-fee{
+			height: 20px;
+			width: 60px;
+			display: inline-block;
+			font-size: 10px;
+			line-height: 20px;
+			background-color: #fb0;
+			border: 1px solid #fa0;
+			border-radius: 2px;
+			padding: 0 2px;
+			color: #fff;
+			position: relative;
+			top: -2px;
+		}
+		.wrapper .code-wrapper .left .info{
+			height: 25px;
+			width: 100%;
+			position: absolute;
+			left: 10px;
+			top: 40px;
+			font-size: 12px;
+			line-height: 25px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 标题区 -->
+		<div class="title-wrapper">
+			<div class="version-wrapper">
+				<span>精读版</span>
+			</div>
+			<div class="title-con">
+				<p class="title-num">一</p>
+				<p class="title-eng">Santorini Greek: The Most Stunning Sunset in the World</p>
+				<p class="title-ch">在爱琴海边，陪你看世界最美的日落</p>
+			</div>
+		</div>
+		<!-- 信息区 -->
+		<div class="info-wrapper">
+			<div class="avatar-wrapper info-con">
+				<div class="avatar">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRphuXHlfOhRvLIR015vPdCsImheaVxFGu3ZRCBetL-CWeaEPJh6w" alt="">
+				</div>
+				<div class="name">Lance Chen</div>
+			</div>
+			<div class="accum-days-wrapper info-con">
+				<div class="accum-days-title title">
+					累计打卡
+				</div>
+				<span class="accum-days-num num">119</span>
+				<span class="accum-days-unit unit">天</span>
+			</div>
+			<div class="accum-mins-wrapper info-con">
+				<div class="accum-mins-title title">
+					累计学习
+				</div>
+				<span class="accum-mins-num num">852</span>
+				<span class="accum-mins-unit unit">分钟</span>
+			</div>
+		</div>
+		<!-- 分割区 -->
+		<div class="cut-off">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<!-- 二维码区 -->
+		<div class="code-wrapper">
+			<div class="QR-code right">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQym0w3GrasxkTWUBldcv4EeGbh4EZlQDBkCwXJpBf3osONbQGE" alt="">
+			</div>
+			<div class="left">
+				<div class="app-name-wrapper">
+					<div class="app-name">留声英语</div>
+					<div class="return-fee">打卡返学费</div>
+				</div>
+				<div class="info">长按开始学习</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

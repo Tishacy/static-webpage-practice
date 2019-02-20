@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>英语流利说</title>
+	<meta charset="utf-8">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			text-decoration: none;
+			font-family: arial;
+		}
+		html,
+		body{
+			width: 100%;
+			height: 100%;
+		}
+		.wrapper{
+			width: 342px;
+			height: 516px;
+			margin: 50px auto 0 auto;
+			position: relative;
+			background: url('https://cdn.pixabay.com/photo/2019/02/13/11/17/clouds-3994154__340.jpg');
+			background-size: 100% 100%;
+		}
+		.wrapper .head{
+			width: 80%;
+			height: 170px;
+			/*border: 1px solid black;*/
+			margin: 0px auto 10px auto;
+			padding-top: 40px;
+		}
+		.wrapper .head p{
+			font-size: 12px;
+			font-weight: 600;
+			margin: 5px 0;
+		}
+		.wrapper .head h2{
+			margin-top: 10px;
+		}
+		.wrapper .head .tips{
+			width: 120px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			border: 1px solid black;
+			margin: 15px 0 20px 0;
+		}
+
+		.wrapper .main{
+			width: 87%;
+			height: 145px;
+			border-bottom: 1px solid #666;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			padding-top: 5px;
+			background-color: #fff;
+			border-radius: 8px;
+		}
+		.wrapper .main .member{
+			width: 92%;
+			margin: 0 auto;
+			margin-top: 10px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #eee;
+			position: relative;
+		}
+		.wrapper .main .member .icon{
+			width: 40px;
+			height: 40px;
+			/*border: 1px solid red;*/
+			position: absolute;
+			border-radius: 20px;
+			background-image: url('https://wx3.sinaimg.cn/large/828ffde3gy1fpn7ahkg6jj20rs0rsn71.jpg');
+			background-size: 100% 100%;
+		}
+		.wrapper .main .member .member-info{
+			margin: 10px 0 10px 50px;
+		}
+		.wrapper .main .member .member-info h4{
+			font-size: 15px;
+		}
+		.wrapper .main .member .member-info p{
+			font-size: 12px;
+			color: #666;
+		}
+
+		.wrapper .main .main-bottom{
+			width: 92%;
+			margin: 0 auto;
+			margin-top: 10px;
+			padding-bottom: 8px;
+			position: relative;
+			/*border: 1px solid black;*/
+		}
+		.wrapper .main .main-bottom ul li{
+			float: left;
+			display: inline-block;
+			width: 33%;
+			height: 70px;
+			/*border: 1px solid red;*/
+			position: relative;
+		}
+		.wrapper .main .main-bottom ul li.left div{
+			text-align: left;
+		}
+		.wrapper .main .main-bottom ul li.middle div{
+			text-align: center;
+		}
+		.wrapper .main .main-bottom ul li.right div{
+			text-align: right;
+		}
+
+		.wrapper .main .main-bottom ul li .content-head{
+			color: #666;
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+		.wrapper .main .main-bottom ul li .content-num{
+			font-size: 24px;
+		}
+		.wrapper .main .main-bottom ul li .content-unit{
+			font-size: 12px;
+			/*border: 1px solid black;*/
+			position: relative;
+			top: 5px;
+		}
+
+		.wrapper .bottom{
+			width: 87%;
+			height: 110px;
+			/*border: 1px solid red;*/
+			border-bottom: 1px solid #666;
+			border-radius: 8px;
+			margin: 0 auto;
+			margin-bottom: 3px;
+			position: relative;
+			background-color: #fff;
+		}
+		.wrapper .bottom .QR-code{
+			width: 70px;
+			height: 70px;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -35px;
+			/*border: 1px solid black;*/
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQym0w3GrasxkTWUBldcv4EeGbh4EZlQDBkCwXJpBf3osONbQGE');
+			background-size: 100% 100%;
+		}
+		.wrapper .bottom .left{
+			height: 70px;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			margin-top: -35px;
+		}
+		.wrapper .bottom .left .left-title h4{
+			font-size: 16px;
+			line-height: 22px;
+		}
+		.wrapper .bottom .left .button{
+			width: 100px;
+			height: 20px;
+			line-height: 20px;
+			padding: 0 5px;
+			border-radius: 12px;			
+			font-size: 12px;
+			position: absolute;
+			bottom: 2px;
+			color: #fff;
+			background-color: #e60;
+			border-top: 1px solid #e50;
+		}
+		.wrapper .bottom .left .button .sj-wrapper{
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background-color: #fff;
+			position: absolute;
+			right: 3px;
+			top: 50%;
+			margin-top: -6px;
+			border-radius: 6px;
+			border-bottom: 1px solid #e40;
+			color: #e60;
+			font-size: 12px;
+			text-align: center;
+		}
+
+		.wrapper .bottom .left .button .sj-wrapper .sj{
+			display: inline-block;
+			width: 0px;
+			height: 0px;
+			border: 3px solid black;
+			border-color: transparent;
+			border-left-color: #e60;
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			margin-left: -1px;
+		}
+
+		.wrapper .copyright{
+			width: 100%;
+			height: 18px;
+			text-align: center;
+			font-size: 13px;
+			color: #fff;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="head">
+			<p class="question">你知道M&A是什么意思吗？</p>
+			<h2>mergers and acquisitions</h2>
+			<p class="answer">M&A指兼并和收购。"They're using M&A to focus on their core businesses."</p>
+			<p class="tips">懂你英语 / 今日 TIPS</p>
+		</div>
+		<div class="main">
+			<div class="member">
+				<div class="icon"></div>
+				<div class="member-info">
+					<h4>极光方糖</h4>
+					<p>刚刚在"懂你英语"上完成了英语学习打卡</p>
+				</div>
+			</div>
+			<div class="main-bottom">
+				<ul>
+					<li class="content left">
+						<div class="content-head">
+							<span>累计打卡</span>
+						</div>
+						<div class="content-con">
+							<span class="content-num">32</span>
+							<span class="content-unit">天</span>
+						</div>
+					</li>
+					<li class="content middle">
+						<div class="content-head">
+							<span>行动力超过</span>
+						</div>
+						<div class="content-con">
+							<span class="content-num">71</span>
+							<span class="content-unit">%的同学</span>
+						</div>
+
+					</li>
+					<li class="content right">
+						<div class="content-head">
+							<span>今日学习</span>
+						</div>
+						<div class="content-con">
+							<span class="content-num">32</span>
+							<span class="content-unit">分钟</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="QR-code">
+				<!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQym0w3GrasxkTWUBldcv4EeGbh4EZlQDBkCwXJpBf3osONbQGE" alt=""> -->
+			</div>
+			<div class="left">
+				<div class="left-title">
+					<h4>懂你英语</h4>
+					<h4>从零开始说出流利口语</h4>
+				</div>
+				<div class="button">
+					长按识别二维码
+					<span class="sj-wrapper">
+						<span class="sj"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<p class="copyright">英语流利说.出品</p>
+	</div>
+</body>
+</html>
+
