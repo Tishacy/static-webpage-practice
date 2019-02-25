@@ -1,0 +1,362 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+html,
+body{
+	width: 100%;
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+	background-color: #fcfcfc;
+}
+
+.btn{
+	height: 38px;
+	line-height: 36px;
+	font-size: 14px;
+	color: #2a2a2a;
+	text-align: center;
+	padding: 0 16px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn:active{
+    background-color: #b3b3b3;
+    color: #fff;
+}
+
+.btn-green{
+	color: #50c87e;
+	border-color: #50c87e;
+}
+
+.btn-green:active{
+    background: #50c87e;
+    color: #fff;
+}
+
+
+/* 导航栏部分 */
+.navi{
+	width: 100%;
+	height: 58px;
+	position: relative;
+	border-bottom: 1px solid transparent;
+}
+
+.navi .left{
+	width: 58px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	/*border: 1px solid black;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.navi .left a.zhihu-logo{
+	display: inline-block;
+	width: 28px;
+	height: 29px;
+	background: url('./img/zhihu-logo-grey.png');
+	background-size: 100% 100%;
+}
+
+.navi .left:hover a.zhihu-logo{
+	background: url('./img/zhihu-logo-dark.png');
+	background-size: 100% 100%;
+	height: 27px;
+}
+
+.navi .right{
+	width: 135px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+}
+
+.navi .right ul{
+	height: 100%;
+}
+
+.navi .right ul li{
+	width: 66px;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navi .right ul li a{
+	color: #808080;
+}
+
+.navi .right ul li a:hover{
+	color: #333;
+}
+
+.navi .right ul li a.write-article:before{
+	content: "";
+	display: block;
+	width: 28px;
+	height: 28px;
+	background: url('./img/write-article-logo-grey.png');
+	background-size: 100% 100%;
+	position: absolute;
+	left: -25px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+.navi .right ul li a.write-article:hover:before{
+	background: url('./img/write-article-logo-dark.png');
+	background-size: 97% 100%;
+	left: -24px;
+}
+
+.navi .right ul li a.more:before{
+	content: "";
+	display: block;
+	width: 35px;
+	height: 28px;
+	background: url('./img/more-logo-grey.png');
+	background-size: 100% 100%;
+}
+
+.navi .right ul li a.more:hover:before{
+	background: url('./img/more-logo-dark.png');
+	background-size: 100% 100%;
+}
+
+
+/* main top 部分 */
+.main-top{
+	width: 100%;
+	height: 470px;
+	/*border: 1px solid red;*/
+	background: url('./img/main-bg.png') center no-repeat;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-top:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url("./img/main-bg2.png") repeat-x;
+	background-size: 20px 450px;
+}
+
+.main-top h1,
+.main-top h2,
+.main-top a{
+	z-index: 5;
+}
+
+.main-top h1{
+	width: 129px;
+	height: 179px;
+	margin-top: 152px;
+	background: url('./img/title.png') center no-repeat;
+	background-size: 100% 100%;
+}
+
+.main-top h2{
+	font-size: 18px;
+	height: 24px;
+	line-height: 24px;
+	font-weight: 300;
+	color: #2a2a2a;
+	letter-spacing: 0.5em;
+	margin-top: 19px;
+}
+
+.main-top a.start-write{
+	display: inline-block;
+	width: 120px;
+	margin-top: 40px;
+}
+
+.main-top a.request{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #50c87e;
+	text-align: center;
+	padding: 0 16px;
+	overflow: hidden;
+	position: absolute;
+	top: 466px;
+}
+
+
+/* main column 专栏部分 */
+.main-column{
+	width: 684px;
+	margin-top: 48px;
+	margin: 48px auto 0 auto;
+	position: relative;
+}
+
+.main-column .head{
+	width: 100%;
+	height: 23px;
+	line-height: 22px;
+	position: relative;
+	margin-bottom: 32px;
+}
+
+.main-column .head h1{
+	width: 104px;
+	overflow: hidden;
+	padding: 0 16px;
+	font-size: 14px;
+	display: inline-block;
+	background-color: #fff;
+	z-index: 1;
+}
+
+@media screen and (min-width: 1020px){
+  .main-column .head h1{
+  	margin: 0 auto;
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .main-column{
+  	width: 912px;
+  }
+}
+
+.main-column .head span.line{
+	color: #d9d9d9;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.main-column .column-list{
+	width: 100%;
+}
+
+.main-column .column-list ul li.column{
+	float: left;
+	width: 206px;
+	height: 258px;
+	margin: 0 11px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.main-column .column-list ul li.column .column-icon{
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.main-column .column-list ul li.column .column-title{
+	margin: 16px auto 7px;
+	width: 174px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #333;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.main-column .column-list ul li.column .column-description{
+	width: 174px;
+	height: 42px;
+	line-height: 21px;
+	margin: 0 auto 14px;
+	text-align: center;
+	color: #808080;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.main-column .column-list ul li.column span{
+	margin-bottom: 14px;
+	text-align: center;
+	color: #808080;
+	font-size: 14px;
+}
+
+.main-column .refresh{
+	width: 90px;
+	margin: 34px auto 0;
+	position: relative;
+	text-align: right;
+	padding: 0 10px;
+}
+
+.main-column .refresh:before{
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-image: url('./img/refresh.png');
+	background-size: 100% 100%;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -9px;
+
+}
+
+/* main bottom 部分*/
+.main-bottom{
+	width: 100%;
+	margin-top: 48px;
+	padding-top: 134px;
+	background: url('./img/main-bg2.png') repeat-x;
+	background-size: 20px 450px;
+}
+
+.main-bottom h1{
+	width: 345px;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 14px;
+	text-align: center;
+	padding: 26px 0;
+	margin: 0 auto 40px;
+	border-top: 1px solid #97ffd8;
+	border-bottom: 1px solid #97ff85;
+}
+
+.main-bottom .btn{
+	width: 120px;
+	margin: 0 auto;
+}
+
+.main-bottom .footer{
+	padding: 80px 0 60px;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+	color: #808080;
+}
