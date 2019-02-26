@@ -234,8 +234,10 @@ body{
 @media screen and (max-width: 1020px){
   .main-column .head h1{
   	width: 104px;
-  	position: absolute;
-  	left: 0;
+/*  	position: absolute;
+  	left: 0;*/
+  	float: left;
+  	margin: 0;
   }
 
   .main-column{
