@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Apple</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                transition-duration: 0.2s;
+                color: #000;
+            }
+            @font-face {
+                font-family: "SF Pro Text";
+                src: url("https://www.apple.com/wss/fonts/SF-Pro-Text/v2/sf-pro-text_regular.woff2");
+            }
+            .section-module {
+                background-color: #fafafa;
+                border: 6px solid #fff;
+            }
+            .title {
+                margin-bottom: 5.6px;
+                text-align: center;
+                font-size: 44px;
+                line-height: 1.14286;
+                font-weight: 600;
+                letter-spacing: .007em;
+                font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+            }
+            .text-content {
+                max-width: 29em;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 21px;
+                line-height: 1.42115;
+                font-weight: 400;
+                letter-spacing: .012em;
+                font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+            }
+            .link {
+                text-align: center;
+                color: #0070c9;
+                position: relative;
+                z-index: 3;
+            }
+            .link:hover {
+                text-decoration: underline;
+            }
+            .module-figure {
+                display: block;
+                margin: 30px auto;
+            }
+
+            /* navigation part */
+            .nav {
+                width: 100%;
+                height: 44px;
+                background-color: rgb(51, 51, 51);
+            }
+            .nav ul.nav-container {
+                max-width: 980px;
+                min-width: 733px;
+                height: 100%;
+                padding: 0 22px;
+                margin: 0 auto;
+                color: #fff;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+            ul.nav-container li.nav-item a{
+                float: left;
+                line-height: 44px;
+                font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: #fff;
+            }
+            ul.nav-container li.nav-item a:hover{
+                opacity: .65;
+            }
+
+            ul li.nav-item.icon a{
+                width: 36px;
+                height: 44px;
+                background: url(./images/icon_image_small.svg);
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+                background-size: 45%;
+            }
+            ul li.nav-item.search a{
+                width: 24px;
+                height: 44px;
+                background: url('https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg');
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+            }
+            ul li.nav-item.bag a{
+                width: 24px;
+                height: 44px;
+                background: url('https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg');
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+            }
+
+            /* main part */
+
+            .main .standalone-module .module-main,
+            .main .collection-module .module-main{
+                max-width: 90%;
+                /* margin: 0 auto; */
+                margin: 3.4em auto 3.1em;
+            }
+            .main .standalone-module h1 {
+                font-size: 28px;
+            }
+            .main .standalone-module p {
+                font-size: 19px;
+                max-width: 24em;
+            }
+            .main .standalone-module ul,
+            .main .collection-module ul {
+                width: 234px;
+                display: flex;
+                justify-content: space-around;
+                margin: 11.050px auto 0;
+                
+            }
+            .main .standalone-module ul li,
+            .main .collection-module ul li {
+                float: left;
+                font-size: 19px;
+                line-height: 1.42115;
+            }
+
+            .side {
+                display: "block";
+                width: 35px;
+                height: 35px;
+                background-color: #fff;
+                box-shadow: 0px 0px 2px #aaa;
+                font-size: 17px;
+                line-height: 35px;
+                text-align: center;
+                border-radius: 3px;
+                position: fixed;
+                right: 15px;
+                bottom: -45px;
+                z-index: 4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul class="nav-container">
+                <li class="nav-item icon">
+                    <a href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Mac</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">iPad</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">iPhone</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Watch</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">TV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Support</a>
+                </li>
+                <li class="nav-item search">
+                    <a href="#" class="nav-item-link"></a>
+                </li>
+                <li class="nav-item bag">
+                    <a href="#" class="nav-item-link"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <section class="standalone-module section-module">
+                <div class="module-main">
+                    <h1 class="title">iPhone XR from $19.99/mo. or $479.</h1>
+                    <p class="text-content">Two great ways to buy. Just trade in your current iPhone online or at an Apple Store.*</p>
+                    <ul>
+                        <li><a href="#" class="link">Buy ></a></li>
+                        <li><a href="#" class="link">Learn more ></a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="collection-module section-module">
+                <a href="#" style="width: 100%; height: 100%; display: block; position: absolute; z-index: 2"></a>
+                <div class="module-main">
+                        <h1 class="title">iPhone XR</h1>
+                        <p class="text-content">All-screen design. Longest battery life ever in an iPhone. Fast performance. Studio quality photos.</p>
+                        <ul>
+                            <li><a href="#" class="link">Learn more ></a></li>
+                            <li><a href="#" class="link">Buy</a></li>
+                        </ul>
+                        <img class="module-figure" src="https://www.apple.com/v/home/ej/images/heroes/iphone-xr/main__bmngiblug0mq_medium_2x.jpg" alt="" width="573px">
+               </div>
+            </section>
+
+            <section class="collection-module section-module">
+                <a href="#" style="width: 100%; height: 100%; display: block; position: absolute; z-index: 2"></a>
+                <div class="module-main">
+                        <h1 class="title">iPhone XS</h1>
+                        <p class="text-content">Largest Super Retina display. Fastest performance with A12 Bionic. Most secure facial authentication with Face ID. </p>
+                        <ul>
+                            <li><a href="#" class="link">Learn more ></a></li>
+                            <li><a href="#" class="link">Buy</a></li>
+                        </ul>
+                        <img class="module-figure" src="https://www.apple.com/v/home/ej/images/heroes/iphone-xs/main__bmngiblug0mq_medium_2x.jpg" alt="" width="573px">
+                </div>
+            </section>
+        
+            <section class="collection-module section-module">
+                <a href="#" style="width: 100%; height: 100%; display: block; position: absolute; z-index: 2"></a>
+                <div class="module-main">
+                        <h1 class="title">iWatch</h1>
+                        <h3 style="color: #cc2229; text-align: center; font-size: 17px; display: block; height: 30px;">SERIES 4</h3>
+                        <p class="text-content">More powerful, more colorful</p>
+                        <ul>
+                            <li><a href="#" class="link">Learn more ></a></li>
+                            <li><a href="#" class="link">Buy</a></li>
+                        </ul>
+                        <img class="module-figure" src="https://www.apple.com/v/home/ej/images/heroes/watch-series-4/watch__csqqcayzqueu_medium_2x.jpg" alt="" width="573px">
+                </div>
+            </section>
+
+
+        </div>
+        <div class="footer"></div>
+
+        <a href="#" class="side">
+            <svg style="margin-top: 4px" class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path></svg>
+        </a>
+
+        <script>
+            var side = document.getElementsByClassName('side')[0];
+            var myScrollFunc = function () {
+                
+                var top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+                if (top > 500) {
+                    // side.style.display = "block";
+                    side.style.bottom = "25px";
+                }else {
+                    // side.style.display = "none";
+                    side.style.bottom = "-45px";
+                }
+            }
+            window.addEventListener("scroll", myScrollFunc);
+
+        </script>
+    </body>
+</html>
